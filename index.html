@@ -1,0 +1,1147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HealthClub Tral | Your Fitness Journey Starts Here</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="icon" href="https://raw.githubusercontent.com/sawwqib/HealthClub/main/Images/ico.jpg" type="image/x-icon">
+    <link rel="shortcut icon" href="https://raw.githubusercontent.com/sawwqib/HealthClub/main/Images/ico.jpg" type="image/x-icon">
+    <style>
+       
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            line-height: 1.6;
+            color: #f8f8f8;
+            background-color: #0f0f0f;
+            user-select: none;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+
+        }
+        
+        .container {
+            max-width: 1140px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        
+        a {
+            text-decoration: none;
+            color: #ff0000;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 12px 25px;
+            background-color: #ff0000;
+            color: white;
+            border-radius: 4px;
+            border: none;
+            cursor: pointer;
+            font-weight: bold;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+        
+        .btn:hover {
+            background-color: #cc0000;
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            margin-bottom: 15px;
+            font-weight: bold;
+            color: #fff;
+        }
+        
+        p {
+            margin-bottom: 15px;
+            color: #ddd;
+        }
+        
+        
+        header {
+            background-color: #000;
+            padding: 15px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #fff;
+        }
+        
+        .logo span {
+            color: #ff0000;
+        }
+        
+        .nav-menu {
+            list-style: none;
+            display: flex;
+            align-items: center;
+        }
+        
+        .nav-menu li {
+            margin-left: 25px;
+        }
+        
+        .nav-menu a {
+            color: #fff;
+            font-weight: bold;
+        }
+        
+        .nav-menu a:hover {
+            color: #ff0000;
+        }
+        
+        .hamburger {
+            display: none;
+            font-size: 24px;
+            cursor: pointer;
+            color: #fff;
+        }
+        
+        
+        .hero {
+            background-image: url('https://raw.githubusercontent.com/sawwqib/HealthClub/main/Images/2.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            position: relative;
+            color: white;
+            display: flex;
+            align-items: center;
+        }
+        
+        .hero:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.6);
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 600px;
+        }
+        
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            color: #fff;
+        }
+        
+        .hero p {
+            margin-bottom: 30px;
+            font-size: 18px;
+        }
+        
+        
+        .section {
+            padding: 80px 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .section-title h2 {
+            font-size: 36px;
+            position: relative;
+            display: inline-block;
+            color: #fff;
+        }
+        
+        .section-title h2:after {
+            content: '';
+            height: 3px;
+            width: 60px;
+            background-color: #ff0000;
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        
+        .about-content {
+            display: flex;
+            gap: 30px;
+            align-items: center;
+        }
+        
+        .about-image {
+            flex: 1;
+        }
+        
+        .about-text {
+            flex: 1;
+        }
+        
+        
+        .bg-dark {
+            background-color: #000;
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .service-item {
+            background-color: #1a1a1a;
+            border-radius: 5px;
+            overflow: hidden;
+            box-shadow: 0 3px 10px rgba(255, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+        }
+        
+        .service-item:hover {
+            transform: translateY(-5px);
+        }
+        
+        .service-img {
+            height: 200px;
+        }
+        
+        .service-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .service-info {
+            padding: 20px;
+        }
+        
+        .service-info h3 {
+            color: #ff0000;
+        }
+        
+        
+        .gallery-container {
+            position: relative;
+            height: 500px;
+            overflow: hidden;
+            border-radius: 5px;
+        }
+        
+        .gallery-slide {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            opacity: 0;
+            transition: opacity 1s ease;
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .gallery-slide.active {
+            opacity: 1;
+        }
+        
+        .gallery-caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 15px;
+            color: white;
+            font-size: 16px;
+        }
+        
+        .gallery-controls {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            transform: translateY(-50%);
+            z-index: 2;
+        }
+        
+        .gallery-btn {
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+            border: none;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            margin: 0 15px;
+        }
+        
+        .gallery-btn:hover {
+            background-color: rgba(255, 0, 0, 0.7);
+        }
+        
+        
+        .testimonial-container {
+             position: relative;
+            overflow: hidden;
+            padding: 20px 0;
+            width: 100%;
+        }
+
+        .testimonial-track {
+            display: flex;
+            animation: scroll 30s linear infinite;
+            width: calc(300px * 12); 
+        }
+
+        @keyframes scroll {
+            0% {
+                 transform: translateX(0);
+                }
+            100% {
+                transform: translateX(calc(-300px * 6));
+            }
+        }
+
+        .testimonial-item {
+                background-color: #1a1a1a;
+                border-radius: 5px;
+                padding: 20px;
+                box-shadow: 0 3px 10px rgba(255, 0, 0, 0.2);
+                width: 280px;
+                flex-shrink: 0;
+                margin-right: 20px;
+        }
+
+        
+        .testimonial-text {
+            margin-bottom: 15px;
+            font-style: italic;
+            position: relative;
+            padding-left: 20px;
+            font-size: 14px;
+        }
+        
+        .testimonial-text:before {
+            content: "";
+            font-size: 40px;
+            color: #ff0000;
+            position: absolute;
+            left: -10px;
+            top: -15px;
+            opacity: 0.5;
+        }
+        
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+        }
+        
+        .author-img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 10px;
+            overflow: hidden;
+            border: 2px solid #ff0000;
+        }
+        
+        .author-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .author-info h4 {
+            margin-bottom: 0;
+            font-size: 16px;
+        }
+        
+        .author-info p {
+            margin-bottom: 0;
+            font-size: 12px;
+            color: #aaa;
+        }
+        
+        
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 30px;
+        }
+        
+        .pricing-item {
+            background-color: #1a1a1a;
+            border-radius: 5px;
+            box-shadow: 0 3px 10px rgba(255, 0, 0, 0.2);
+            text-align: center;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+        
+        .pricing-item:hover {
+            transform: translateY(-10px);
+        }
+        
+        .pricing-header {
+            background-color: #ff0000;
+            color: white;
+            padding: 30px 20px;
+        }
+        
+        .pricing-header h3 {
+            margin-bottom: 10px;
+            font-size: 24px;
+        }
+        
+        .price {
+            font-size: 40px;
+            font-weight: bold;
+        }
+        
+        .price span {
+            font-size: 16px;
+            font-weight: normal;
+        }
+        
+        .pricing-features {
+            padding: 30px 20px;
+        }
+        
+        .pricing-features ul {
+            list-style: none;
+            margin-bottom: 25px;
+        }
+        
+        .pricing-features li {
+            padding: 12px 0;
+            border-bottom: 1px solid #333;
+        }
+        
+       
+        .contact-container {
+            display: flex;
+            gap: 50px;
+            align-items: flex-start;
+        }
+        
+        .contact-info {
+            flex: 1;
+        }
+        
+        .contact-form {
+            flex: 1;
+        }
+        
+        .info-item {
+            display: flex;
+            margin-bottom: 25px;
+        }
+        
+        .info-icon {
+            margin-right: 20px;
+            width: 40px;
+            height: 40px;
+            background-color: #ff0000;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+        }
+        
+        .info-content h4 {
+            color: #ff0000;
+            margin-bottom: 5px;
+        }
+        
+        .form-group {
+            margin-bottom: 25px;
+        }
+        
+        .form-control {
+            width: 100%;
+            padding: 15px;
+            background-color: #1a1a1a;
+            border: 1px solid #333;
+            border-radius: 4px;
+            color: #fff;
+            font-size: 16px;
+        }
+        
+        .form-control:focus {
+            border-color: #ff0000;
+            outline: none;
+        }
+        
+        textarea.form-control {
+            height: 150px;
+            resize: vertical;
+        }
+        
+        
+        footer {
+            background-color: #000;
+            color: white;
+            padding: 30px 0;
+            text-align: center;
+        }
+        
+        .social-links {
+            margin-bottom: 20px;
+        }
+        
+        .social-links a {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background-color: #1a1a1a;
+            color: white;
+            border-radius: 50%;
+            margin: 0 5px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            transition: all 0.3s ease;
+        }
+        
+        .social-links a:hover {
+            background-color: #ff0000;
+        }
+        
+       
+        @media (max-width: 768px) {
+            .hamburger {
+                display: block;
+            }
+            
+            .nav-menu {
+                position: fixed;
+                top: 70px;
+                left: -100%;
+                width: 100%;
+                background-color: #000;
+                flex-direction: column;
+                padding: 20px 0;
+                transition: 0.3s;
+                box-shadow: 0 10px 10px rgba(0, 0, 0, 0.4);
+            }
+            
+            .nav-menu.active {
+                left: 0;
+            }
+            
+            .nav-menu li {
+                margin: 10px 0;
+            }
+            
+            .nav-menu .btn {
+                display: none;
+            }
+            
+            .about-content, .contact-container {
+                flex-direction: column;
+            }
+            
+            .hero h1 {
+                font-size: 32px;
+            }
+            
+            .section {
+                padding: 50px 0;
+            }
+            
+            .gallery-container {
+                height: 350px;
+            }
+        }
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+            background: #ffffff;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+.contact-form h3 {
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+    color: #333;
+    text-align: center;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: #444;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    margin-bottom: 1.2rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border 0.3s;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #c41414;
+    outline: none;
+}
+
+.contact-form button {
+    width: 100%;
+    padding: 0.9rem;
+    background-color: #da1616;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.contact-form button:hover {
+    background-color: #c71616;
+}
+
+@media (max-width: 600px) {
+    .contact-form {
+        padding: 1.5rem;
+    }
+}
+@media (max-width: 768px) {
+    .testimonial-item {
+        width: 250px;
+    }
+    
+    .testimonial-track {
+        animation-duration: 40s;
+    }
+}
+
+.popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 1000;
+  align-items: center;
+  justify-content: center;
+}
+
+.popup-content {
+  background: #1a1a1a;
+  padding: 30px;
+  border-radius: 8px;
+  text-align: center;
+  max-width: 400px;
+  border: 2px solid #ff0000;
+  position: relative;
+}
+
+.close-popup {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.close-popup:hover {
+  color: #ff0000;
+}
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container header-container">
+            <div class="logo">Health<span>Club</span> Tral</div>
+            <div class="hamburger">
+                <i class="fas fa-bars"></i>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#gallery">Interior</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="#pricing">Membership</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+
+
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Achieve Your Fitness Goals With Us</h1>
+                <p>At <b style="color: #ff0000;"> HealthClub</b> Tral, we provide the equipment, expertise, and supportive community you need to transform your body and health.</p>
+                <a href="#pricing" class="btn">View Membership Options</a>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="about" class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>About Our Gym</h2>
+            </div>
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="https://raw.githubusercontent.com/sawwqib/HealthClub/main/Images/1.jpg" alt="Gym interior">
+                </div>
+                <div class="about-text">
+                    <p>HealthClub Tral was established in 2024 with a mission to create a welcoming fitness environment for people of all levels. Our facility spans 12,000 square feet and features modern equipment for cardio, strength training, and functional fitness.</p>
+                    <p>What sets us apart is our commitment to personalized fitness. Our team of certified trainers works with members to develop customized programs that align with their goals, whether it's weight loss, muscle gain, or improved health.</p>
+                    <p>We believe fitness is a journey, not a destination. That's why we focus on building sustainable habits and providing the support and resources our members need to succeed long-term.</p>
+                    <a href="#services" class="btn">Explore Our Services</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="services" class="section bg-dark">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Services</h2>
+            </div>
+            <div class="services-grid">
+                <div class="service-item">
+                    <div class="service-img">
+                        <img src="https://raw.githubusercontent.com/sawwqib/HealthClub/main/Images/train.png" alt="Personal Training">
+                    </div>
+                    <div class="service-info">
+                        <h3>Personal Training</h3>
+                        <p>Work one-on-one with our expert trainers to create a customized fitness plan tailored to your specific goals and needs.</p>
+                    </div>
+                </div>
+                
+                <div class="service-item">
+                    <div class="service-img">
+                        <img src="https://raw.githubusercontent.com/sawwqib/HealthClub/main/Images/nutri.png" alt="Nutrition Counseling">
+                    </div>
+                    <div class="service-info">
+                        <h3>Nutrition Counseling</h3>
+                        <p>Meet with our nutrition specialists to develop eating strategies that complement your fitness routine and overall health goals.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="gallery" class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Facility</h2>
+            </div>
+            <div class="gallery-container">
+                <div class="gallery-slide active" style="background-image: url('https://raw.githubusercontent.com/sawwqib/HealthClub/main/Images/2.jpg')">
+                    <div class="gallery-caption">Weight Training Area</div>
+                </div>
+                <div class="gallery-slide" style="background-image: url('https://raw.githubusercontent.com/sawwqib/HealthClub/main/Images/3.jpg')">
+                    <div class="gallery-caption">Modern Cardio Equipment</div>
+                </div>
+                <div class="gallery-controls">
+                    <button class="gallery-btn prev"><i class="fas fa-chevron-left"></i></button>
+                    <button class="gallery-btn next"><i class="fas fa-chevron-right"></i></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+<section id="testimonials" class="section bg-dark">
+    <div class="container">
+        <div class="section-title">
+            <h2>Member Testimonials</h2>
+        </div>
+        <div class="testimonial-container">
+            <div class="testimonial-track">
+
+                <div class="testimonial-item">
+                    <div class="testimonial-text">
+                        <p>Best Gym In Town <br> ❤️</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-img">
+                            <img src="https://raw.githubusercontent.com/sawwqib/webimages/main/Images/wasu.jpeg" alt="Member Jennifer">
+                        </div>
+                        <div class="author-info">
+                            <h4>Wasu Reshi</h4>
+                            <p>Member for 1 Year</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-item">
+                    <div class="testimonial-text">
+                        <p>changed the game for me 💪🔥 Never felt stronger!</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-img">
+                            <img src="https://raw.githubusercontent.com/sawwqib/webimages/refs/heads/main/Images/aadil.jpeg" alt="Member Robert">
+                        </div>
+                        <div class="author-info">
+                            <h4>Aadil</h4>
+                            <p>Member for 1 year</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-item">
+                    <div class="testimonial-text">
+                        <p>Clean gym, good vibes, no cringe gym bros 🙌✨</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-img">
+                            <img src="https://raw.githubusercontent.com/sawwqib/webimages/refs/heads/main/Images/ilham.jpeg" alt="Member Lisa">
+                        </div>
+                        <div class="author-info">
+                            <h4>Mir Ilham</h4>
+                            <p>Member for 1 year</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-item">
+                    <div class="testimonial-text">
+                        <p>Came for the gains, stayed for the community 🤝❤️</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-img">
+                            <img src="https://raw.githubusercontent.com/sawwqib/webimages/refs/heads/main/Images/mohit.jpeg" alt="Member David">
+                        </div>
+                        <div class="author-info">
+                            <h4>Mohit Roy</h4>
+                            <p>Member for 1 year</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-item">
+                    <div class="testimonial-text">
+                        <p>The 6am grind hits different here ☕️.</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-img">
+                            <img src="https://raw.githubusercontent.com/sawwqib/webimages/refs/heads/main/Images/zayn.jpeg" alt="Member Sarah">
+                        </div>
+                        <div class="author-info">
+                            <h4>Zayn</h4>
+                            <p>Member for 1 year</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-item">
+                    <div class="testimonial-text">
+                        <p>Trainers here actually know what they're doing 👏💯</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-img">
+                            <img src="https://raw.githubusercontent.com/sawwqib/webimages/refs/heads/main/Images/sahil.jpeg" alt="Member Jennifer">
+                        </div>
+                        <div class="author-info">
+                            <h4>Sahil</h4>
+                            <p>Member for 6 months</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+    <section id="pricing" class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Memberships</h2>
+            </div>
+            <div class="pricing-grid">
+                <div class="pricing-item">
+                    <div class="pricing-header">
+                        <h3>Students</h3>
+                        <div class="price">₹700<span>/month</span></div>
+                    </div>
+                    <div class="pricing-features">
+                        <ul>
+                            <li>Full gym access</li>
+                            <li>All classes included</li>
+                            <li>Fitness assessment</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="pricing-item">
+                    <div class="pricing-header">
+                        <h3>Employees</h3>
+                        <div class="price">₹900<span>/month</span></div>
+                    </div>
+                    <div class="pricing-features">
+                        <ul>
+                            <li>Full gym access</li>
+                            <li>All classes included</li>
+                            <li>Fitness assessment</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="pricing-item">
+                    <div class="pricing-header">
+                        <h3>Premium</h3>
+                        <div class="price">₹1500<span>/3 months</span></div>
+                    </div>
+                    <div class="pricing-features">
+                        <ul>
+                            <li>Full gym access</li>
+                            <li>All classes included</li>
+                            <li>Fitness assessment</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+<section id="contact" class="section bg-dark">
+    <div class="container">
+        <div class="section-title">
+            <h2>Contact Us</h2>
+        </div>
+
+        <div class="contact-container" style="display: flex; flex-wrap: wrap; gap: 2rem;">
+
+            <div class="contact-info" style="flex: 1 1 300px;">
+                <h3>Our Location</h3>
+                <div class="info-item">
+                    <div class="info-icon"><i class="fas fa-map-marker-alt"></i></div>
+                    <div class="info-content">
+                        <h4>Address</h4>
+                        <p>Townhall Road, Tral, Pulwama, Jammu and Kashmir 192123</p>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <div class="info-icon"><i class="fas fa-phone"></i></div>
+                    <div class="info-content">
+                        <h4>Phone</h4>
+                        <p>+917006157216</p>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <div class="info-icon"><i class="fas fa-envelope"></i></div>
+                    <div class="info-content">
+                        <h4>Email</h4>
+                        <p>healthclub@gmail.com</p>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <div class="info-icon"><i class="fas fa-clock"></i></div>
+                    <div class="info-content">
+                        <h4>Opening Hours</h4>
+                        <p>👨 Mon-Sat: 6:00 AM - 09:30 AM <b style="color: #ff0000;">&</b> 11:30 AM - 10:00 PM</p>
+                        <p>👩 Mon-Sat: 9:30 AM - 11:30 AM</p>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="contact-right" style="flex: 1 1 300px;">
+                <div class="contact-form">
+                    <form id="contactForm" action="https://formspree.io/f/mvgklayn" method="POST">
+  <label>Your Name:</label>
+  <input type="text" name="name" required>
+
+  <label>Your Email:</label>
+  <input type="email" name="_replyto" required>
+
+  <label>Message:</label>
+  <textarea name="message" required></textarea>
+
+  <button type="submit">Send</button>
+</form>
+                </div>
+
+                <footer style="margin-top: 2rem;">
+                    <div class="social-links" style="text-align: center; margin-bottom: 1rem;">
+                        <a href="https://wa.me/917006157216" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                        <a href="https://instagram.com/healthclubtral" target="_blank"><i class="fab fa-instagram"></i></a>
+                    </div>
+                    <div class="legal-protection">
+                        <p>© <span id="dynamic-year"><script>document.getElementById('dynamic-year').textContent = new Date().getFullYear();</script></span> HealthClub Tral. All Rights Reserved.</p>
+                        
+                      </div>
+                </footer>
+            </div>
+        </div>
+    </div>
+<div id="successPopup" class="popup">
+  <div class="popup-content">
+    <span class="close-popup">×</span>
+    <h3>✅ Success!</h3>
+    <p>Your message has been sent. We'll contact you soon!</p>
+  </div>
+</div>
+</section>
+
+    <script>
+
+        document.addEventListener('DOMContentLoaded', function() {
+            let slides = document.querySelectorAll('.gallery-slide');
+            let currentSlide = 0;
+            
+            document.querySelector('.gallery-btn.next').addEventListener('click', function() {
+                slides[currentSlide].classList.remove('active');
+                currentSlide = (currentSlide + 1) % slides.length;
+                slides[currentSlide].classList.add('active');
+            });
+            
+            document.querySelector('.gallery-btn.prev').addEventListener('click', function() {
+                slides[currentSlide].classList.remove('active');
+                currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+                slides[currentSlide].classList.add('active');
+            });
+            
+
+            setInterval(function() {
+                slides[currentSlide].classList.remove('active');
+                currentSlide = (currentSlide + 1) % slides.length;
+                slides[currentSlide].classList.add('active');
+            }, 5000);
+        });
+
+
+    document.addEventListener('DOMContentLoaded', function() {
+        const hamburger = document.querySelector('.hamburger');
+        const navMenu = document.querySelector('.nav-menu');
+
+        hamburger.addEventListener('click', function() {
+            navMenu.classList.toggle('active');
+            hamburger.innerHTML = navMenu.classList.contains('active') ? 
+                '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
+        });
+
+
+        const navLinks = document.querySelectorAll('.nav-menu a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                navMenu.classList.remove('active');
+                hamburger.innerHTML = '<i class="fas fa-bars"></i>';
+            });
+        });
+    });
+
+document.addEventListener('DOMContentLoaded', function() {
+    const track = document.querySelector('.testimonial-track');
+    const items = document.querySelectorAll('.testimonial-item');
+    
+
+    items.forEach(item => {
+        track.appendChild(item.cloneNode(true));
+    });
+    
+
+    track.addEventListener('mouseenter', () => {
+        track.style.animationPlayState = 'paused';
+    });
+    
+    track.addEventListener('mouseleave', () => {
+        track.style.animationPlayState = 'running';
+    });
+});
+const form = document.getElementById("contactForm");
+  const popup = document.getElementById("successPopup");
+  const closeBtn = document.querySelector(".close-popup");
+
+
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    
+    const submitBtn = form.querySelector("button");
+    submitBtn.disabled = true;
+    submitBtn.textContent = "Sending...";
+
+    try {
+      const response = await fetch(form.action, {
+        method: "POST",
+        body: new FormData(form),
+        headers: { "Accept": "application/json" }
+      });
+
+      if (response.ok) {
+        form.reset();
+        popup.style.display = "flex";
+      } else {
+        alert("Error! Please try again.");
+      }
+    } catch (error) {
+      alert("Failed to send. Check your connection.");
+    } finally {
+      submitBtn.disabled = false;
+      submitBtn.textContent = "Send";
+    }
+  });
+
+
+  closeBtn.addEventListener("click", () => {
+    popup.style.display = "none";
+  });
+
+
+  window.addEventListener("click", (e) => {
+    if (e.target === popup) {
+      popup.style.display = "none";
+    }
+  });
+  document.addEventListener('contextmenu', function(e) {
+    e.preventDefault();
+});
+
+document.addEventListener('selectstart', function(e) {
+    e.preventDefault();
+});
+
+    </script>
+</body>
+</html>
