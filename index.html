@@ -913,7 +913,45 @@
         </div>
     </div>
 </section>
+<!-- Add this anywhere you want the counter (About section recommended) -->
+<div class="counter-container" style="text-align: center; margin: 40px 0; padding: 20px; background: rgba(255,0,0,0.1); border-radius: 10px;">
+    <div class="counter" style="font-size: 48px; color: #ff0000; font-weight: bold;">0</div>
+    <div style="font-size: 18px; color: #fff;">Happy Members & Counting</div>
+</div>
 
+<script>
+    function animateCounter() {
+        const counter = document.querySelector('.counter');
+        const target = 350;
+        const duration = 2000; // 2 seconds
+        const startTime = performance.now();
+        
+        function updateCounter(currentTime) {
+            const elapsedTime = currentTime - startTime;
+            const progress = Math.min(elapsedTime / duration, 1);
+            const currentValue = Math.floor(progress * target);
+            
+            counter.textContent = currentValue;
+            
+            if (progress < 1) {
+                requestAnimationFrame(updateCounter);
+            } else {
+                counter.textContent = target + '+'; // Add "+" when done
+            }
+        }
+        
+        requestAnimationFrame(updateCounter);
+    }
+    
+    const observer = new IntersectionObserver((entries) => {
+        if (entries[0].isIntersecting) {
+            animateCounter();
+            observer.disconnect(); // Stop observing after animation
+        }
+    });
+    
+    observer.observe(document.querySelector('.counter-container'));
+</script>
 
     <section id="pricing" class="section">
         <div class="container">
